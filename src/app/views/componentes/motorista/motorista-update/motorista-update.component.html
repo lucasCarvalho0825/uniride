@@ -1,0 +1,130 @@
+<br/>
+<mat-card>
+    <mat-card-title>atualizar Motorista</mat-card-title>
+
+    <!-- formulário-->
+    <span> DADOS PESSOAIS:</span>
+    <div class="div">
+        <td>
+            <form>
+                <span>Nome do motorista</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.nome" name="nome" matInput>
+                </mat-form-field>
+
+                <span>Telefone</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.curso" name="curso" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+
+        <td>
+            <form>
+                <span>Curso</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.cpf" name="cpf" matInput>
+                </mat-form-field>
+
+                <span>CPF</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.telefone" name="telefone" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+    </div>
+</mat-card>
+
+<br/>
+
+<mat-card>
+    <span> DADOS DE ENDEREÇO:</span>
+    <br/>
+    <div class="div">
+        <td>
+            <form>
+                <span>Rua</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.endereco.rua" name="rua" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+        <td>
+            <form>
+                <span>Bairro</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.endereco.bairro" name="bairro" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+        <td>
+            <form>
+                <span>Cidade</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.endereco.cidade " name="cidade" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+    </div>
+</mat-card>
+<br/>
+
+<mat-card>
+    <span> DADOS DO VEÍCULO:</span>
+    <br/>
+    <div class="div">
+        <td>
+            <form>
+                <span>Marca</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.carro.marca" name="marca" matInput>
+                </mat-form-field>
+
+                <span>Modelo</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.carro.modelo" name="modelo" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+
+        <td>
+            <form>
+                <span>Placa</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.carro.placa" name="placa" matInput>
+                </mat-form-field>
+
+                <span>Cor</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.carro.cor" name="cor" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+
+        <td>
+            <form>
+                <span>Ano</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="motorista.carro.ano" name="ano" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+    </div>
+
+    <mat-card-actions align="end">
+        <button (click)="atualizar()" mat-button>Salvar</button>
+        <button (click)="cancelar()" mat-button>Cancelar</button>
+    </mat-card-actions>
+</mat-card>

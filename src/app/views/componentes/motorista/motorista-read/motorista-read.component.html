@@ -1,0 +1,58 @@
+<br/>
+
+<div class="create">
+    <button (click)="criar()" class="mat-elevation-z8 button" mat-stroked-button color="accent">Novo Motorista</button>
+</div>
+
+
+<br/>
+<mat-card class="mat-elevation-z8 container">
+    <br/>
+    <div>
+        <table class="container" mat-table [dataSource]="motoristas">
+
+            <ng-container matColumnDef="id">
+                <th class="header" mat-header-cell *matHeaderCellDef> ID </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nome">
+                <th class="header" mat-header-cell *matHeaderCellDef> NOME </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.nome}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="curso">
+                <th class="header" mat-header-cell *matHeaderCellDef> CPF </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.curso}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="cpf">
+                <th class="header" mat-header-cell *matHeaderCellDef> TELEFONE </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="telefone">
+                <th class="header" mat-header-cell *matHeaderCellDef> CURSO </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.telefone}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ações">
+                <th class="header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
+                <td class="header" mat-cell *matCellDef="let element">
+                    <a routerLink="atualizar/{{element.id}}">
+                        <i id="edit" class="material-icons">edit</i>
+                    </a>
+                    <a routerLink="deletar/{{ element.id }}">
+                        <i id="delete" class="material-icons">delete</i>
+                    </a>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+    </div>
+
+</mat-card>

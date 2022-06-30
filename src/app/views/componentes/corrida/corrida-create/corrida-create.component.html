@@ -1,0 +1,83 @@
+<br/>
+<mat-card>
+    <mat-card-title>Criar corrida</mat-card-title>
+
+    <!-- formulário-->
+    <div class="div">
+        <td>
+            <form>
+                <span>Nome do passageiro</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <span>Onde estou</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </form>
+        </td>
+
+        <td>
+            <form>
+                <span>Nome do motorista</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <span>Onde vou</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </form>
+        </td>
+
+    </div>
+
+    <mat-card-actions align="end">
+        <button mat-button>Simular</button>
+    </mat-card-actions>
+</mat-card>
+
+<br/>
+<mat-card>
+    <div class="div">
+        <td>
+            <form>
+                <span>Distância</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                    <span matSuffix> KM</span>
+                </mat-form-field>
+            </form>
+        </td>
+        <td>
+            <form>
+                <span>Tempo estimado</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </form>
+        </td>
+        <td>
+            <form>
+                <span>Preço</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input matInput>
+                    <span matPrefix>R$ &nbsp;</span>
+                </mat-form-field>
+            </form>
+        </td>
+    </div>
+
+    <mat-card-actions align="end">
+        <button mat-button>Confirmar</button>
+    </mat-card-actions>
+</mat-card>

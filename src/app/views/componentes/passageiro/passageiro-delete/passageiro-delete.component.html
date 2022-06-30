@@ -1,0 +1,81 @@
+<br/>
+<mat-card>
+    <mat-card-title>Deletar Passageiro</mat-card-title>
+
+    <!-- formulário-->
+    <span> DADOS PESSOAIS:</span>
+    <div class="div">
+        <td>
+            <form>
+                <span>Nome do motorista</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.nome" name="nome" matInput>
+                </mat-form-field>
+
+                <span>Telefone</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.curso" name="curso" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+
+        <td>
+            <form>
+                <span>Curso</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.cpf" name="cpf" matInput>
+                </mat-form-field>
+
+                <span>CPF</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.telefone" name="telefone" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+    </div>
+</mat-card>
+
+<br/>
+
+<mat-card>
+    <span> DADOS DE ENDEREÇO:</span>
+    <br/>
+    <div class="div">
+        <td>
+            <form>
+                <span>Rua</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.endereco.rua" name="rua" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+        <td>
+            <form>
+                <span>Bairro</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.endereco.bairro" name="bairro" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+        <td>
+            <form>
+                <span>Cidade</span>
+                <mat-form-field class="mat-form-field" appearance="fill">
+                    <mat-label class="example-full-width"></mat-label>
+                    <input [(ngModel)]="passageiro.endereco.cidade" name="cidade" matInput>
+                </mat-form-field>
+            </form>
+        </td>
+    </div>
+
+    <mat-card-actions align="end">
+        <button (click)="deletar()" mat-button>Deletar</button>
+        <button (click)="cancelar()" mat-button>Cancelar</button>
+    </mat-card-actions>
+</mat-card>

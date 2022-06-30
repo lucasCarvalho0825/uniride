@@ -1,0 +1,54 @@
+<br/>
+
+<div class="create">
+    <button (click)="criar()" class="mat-elevation-z8 button" mat-stroked-button color="accent">Nova corrida</button>
+</div>
+
+<br/>
+
+<mat-card class="mat-elevation-z8 container">
+    <div>
+        <table class="container" mat-table [dataSource]="corridas">
+
+            <ng-container matColumnDef="passageiro">
+                <th class="header" mat-header-cell *matHeaderCellDef> PASSAGEIRO </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.passageiro.nome}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="motorista">
+                <th class="header" mat-header-cell *matHeaderCellDef> MOTORISTA </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.motorista.nome}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="inicio">
+                <th class="header" mat-header-cell *matHeaderCellDef> LOCAL (inicio) </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.inicio}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="fim">
+                <th class="header" mat-header-cell *matHeaderCellDef> LOCAL (fim) </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.fim}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="preco">
+                <th class="header" mat-header-cell *matHeaderCellDef> PREÇO </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.preco}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="duracao">
+                <th class="header" mat-header-cell *matHeaderCellDef> DURAÇÃO </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.duracao}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="distancia">
+                <th class="header" mat-header-cell *matHeaderCellDef> DISTÂNCIA </th>
+                <td class="row" mat-cell *matCellDef="let element"> {{element.distancia}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+    </div>
+</mat-card>
